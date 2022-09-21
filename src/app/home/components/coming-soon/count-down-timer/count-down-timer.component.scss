@@ -1,0 +1,32 @@
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/_mixins.scss';
+
+.count-wrapper {
+  background-color: #ba663a;
+  border: 12px solid #ba663a;
+  margin: 0 auto;
+  .digit-wrapper {
+    width: 23.7%;
+    background-color: #d6efef;
+
+    h1 {
+      color: #4d4d77;
+      font-size: 1.5rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      color: #4d4d77;
+      font-size: 0.875rem;
+    }
+  }
+
+  @include media-breakpoint-between(sm, xl) {
+    width: 75%;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 50%;
+  }
+}

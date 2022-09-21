@@ -1,1 +1,220 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "@angular/material/theming" as mat-theming;
+@import url("https://fonts.cdnfonts.com/css/avenir");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "~bootstrap/scss/bootstrap";
+@import "../src/styles/colors";
+@import "../src/styles/typography";
+
+// Material
+@include mat.core();
+
+html,
+body {
+  overflow-x: hidden;
+  touch-action: pan-y manipulation;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Avenir", sans-serif;
+  overflow-x: hidden;
+}
+
+.main-container {
+  flex: 1 0 auto;
+  display: flex;
+  position: relative;
+  max-width: 100vw;
+}
+
+.main-content {
+  max-width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+$mat-accent-color: (
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (),
+);
+$custom-primary: mat.define-palette(mat.$blue-palette, 500);
+$custom-accent: mat.define-palette($mat-accent-color, 500);
+$custom-warn: mat.define-palette(mat.$red-palette, 500);
+
+$custom-typography: mat.define-typography-config(
+  $font-family: "Avenir",
+);
+
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+    typography: $custom-typography,
+  )
+);
+
+$custom-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($custom-theme);
+$color-config: mat.get-color-config($custom-theme);
+$primary-palette: map.get($color-config, "primary");
+$accent-palette: map.get($color-config, "accent");
+$warn-palette: map.get($color-config, "warn");
+
+// override text
+.fs-lg {
+  font-size: 2.5rem !important;
+  letter-spacing: 2.9px;
+  font-family: "avenir-black" !important;
+  span {
+    font-size: 3.5rem !important;
+  }
+  @include media-breakpoint-between(sm, lg) {
+    font-size: 2.3rem !important;
+    span {
+      font-size: 2rem !important;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 2.3rem !important;
+    span {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+.fs-md {
+  font-size: 1.125rem;
+  font-weight: 500;
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+}
+.fs-sm {
+  font-size: 0.8rem !important;
+}
+.fs-small {
+  font-size: 1rem !important;
+  @include media-breakpoint-down(md) {
+    font-size: 0.75rem !important;
+  }
+}
+.fs-3 {
+  @include media-breakpoint-down(sm) {
+    font-size: 1.625rem !important;
+  }
+}
+.fs-5 {
+  @include media-breakpoint-down(sm) {
+    font-size: 1.25rem !important;
+  }
+}
+
+.title {
+  font-family: "avenir-heavy";
+  font-size: 3.5rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 2.625rem;
+  }
+}
+.heavy-font {
+  font-family: "avenir-heavy";
+}
+.medium-font {
+  font-family: "avenir-medium";
+}
+.roman-font {
+  font-family: "avenir-roman";
+}
+
+.fw-bold {
+  font-weight: 900 !important;
+}
+
+.fw-semibold {
+  font-weight: 800 !important;
+}
+.fw-medium {
+  font-weight: 500 !important;
+}
+.about-color {
+  background: -webkit-linear-gradient(0.5turn, yellow, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media screen and (min-width: 1600px) {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+.text-gray {
+  color: $gray-color !important;
+}
+.text-gray-2 {
+  color: $gray-2;
+}
+.text-gray-3 {
+  color: $gray-3;
+}
+.text-yellowish {
+  // font-size: 20px;
+  background: -webkit-linear-gradient(0.5turn, yellow, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-black {
+  color: black;
+}
+.text-white {
+  color: white;
+}
+
+/* custom mat button */
+.mat-raised-button,
+.mat-flat-button,
+.mat-stroked-button {
+  padding: 0.8rem 0rem !important;
+  font-size: 1.25rem !important;
+  color: white;
+  background-color: $primary-color !important;
+}
+
+// html,
+// body {
+//   height: 100%;
+// }
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

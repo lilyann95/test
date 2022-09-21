@@ -1,0 +1,43 @@
+@import "../../../../styles/colors";
+#footer {
+  background-color: white;
+  padding: 3rem 0 0;
+
+  .footer-logo {
+    img {
+      width: 10rem;
+    }
+  }
+  h4.title {
+    color: white;
+    font-family: "poppins-semiBold";
+    font-size: 1.2rem;
+  }
+  a,
+  .nav-link {
+    font-family: "poppins-regular";
+    line-height: 37px;
+    color: white;
+    padding: 0;
+  }
+  a {
+    color: red;
+    text-decoration: none;
+  }
+
+  p {
+    color: white;
+  }
+  hr {
+    border-color: rgba($color: white, $alpha: 0.25);
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding: 2.5rem 0 0;
+    .footer-logo {
+      img {
+        width: 7rem;
+      }
+    }
+  }
+}

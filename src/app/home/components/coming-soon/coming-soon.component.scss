@@ -1,0 +1,44 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+
+.wrapper {
+  background-image: url("~src/assets/images/coming-soon/large-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  .coming-soon-bg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    z-index: 2;
+
+    .title {
+      font-size: 2.8rem;
+      white-space: nowrap;
+      @include media-breakpoint-up(md) {
+        font-size: 5.5rem;
+      }
+    }
+
+    .message {
+      @media (min-width: 380px) and (max-width: 500px) {
+        margin-bottom: 4rem !important;
+      }
+    }
+  }
+  .about {
+    @media screen and (max-width: 360px) {
+      // visibility: hidden;
+      display: none !important;
+      margin-bottom: 2rem !important;
+    }
+  }
+  @media only screen and (max-device-width: 767px) {
+    background-image: url("~src/assets/images/coming-soon/mobile-bg.svg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

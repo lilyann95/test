@@ -1,0 +1,159 @@
+<div class="wrapper">
+  <ng-lottie
+    class="d-none d-xxl-block"
+    [options]="ball"
+    style="top: 75%; z-index: 3; position: absolute; left: 0%; width: 11%"
+  ></ng-lottie>
+  <ng-lottie
+    class="d-none d-xl-block d-xxl-none"
+    [options]="ball"
+    style="top: 55%; z-index: 3; position: absolute; left: 0%; width: 25%"
+  ></ng-lottie>
+  <div
+    class="row position-absolute d-block d-md-none ps-2"
+    style="z-index: 1; top: 3%; width: 100%"
+  >
+    <div class="col">
+      <img src="assets/images/coming-soon/logo.svg" class="w-100" alt="Logo" />
+    </div>
+  </div>
+  <div class="coming-soon-bg position-absolute" style="z-index: 2">
+    <ng-lottie
+      [options]="light"
+      class="d-none d-sm-block"
+      style="
+        top: 0;
+        z-index: 2;
+        position: absolute;
+        left: 60%;
+        width: 70%;
+
+        transform: translateX(-50%);
+      "
+    ></ng-lottie>
+    <ng-lottie
+      [options]="mobileLight"
+      class="d-sm-none d-block"
+      style="
+        top: -7px;
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+      "
+    ></ng-lottie>
+
+    <div style="padding-top: 10rem"></div>
+
+    <div class="position-absolute bottom-0 w-100">
+      <div class="container d-none d-lg-block message px-4">
+        <div class="row">
+          <div class="col">
+            <p class="text-white fw-bold fs-lg text-center mt-sm-5 my-4">
+              Coming Soon!
+            </p>
+            <p class="text-white text-center fs-md mb-4 fs-5">
+              We are going live in
+            </p>
+          </div>
+        </div>
+        <app-count-down-timer></app-count-down-timer>
+      </div>
+
+      <div class="container d-block d-md-none message px-4 pt-1 mb-3">
+        <div class="row">
+          <div class="col">
+            <p class="text-white text-center fs-md mb-4 fs-5 pt-5">
+              We are going live in
+            </p>
+          </div>
+        </div>
+        <app-count-down-timer></app-count-down-timer>
+      </div>
+
+      <div class="container d-none d-md-block d-lg-none message px-4">
+        <div class="row">
+          <div class="col">
+            <p class="text-white fw-bold fs-lg text-center mt-sm-5 my-4">
+              Coming Soon!
+            </p>
+            <p class="text-white text-center fs-md mb-4 fs-5">
+              We are going live in
+            </p>
+          </div>
+        </div>
+        <app-count-down-timer></app-count-down-timer>
+      </div>
+
+      <div class="row about d-flex align-items-end">
+        <div class="col-12 col-md-6">
+          <div class="row px-3 pt-0 pt-sm-4 pt-lg-0 pt-xl-5">
+            <div class="col-3">
+              <h1 class="text-white">ABOUT</h1>
+            </div>
+            <div class="col-9">
+              <p class="about-color">
+                The term shisha is derived from the persian word "shishe". We
+                are a very fine and creative shisha servicing company who's aim
+                is to make shisha smoking a lifestyle, give unforgetable
+                experience and a classic taste of luxury with our perfectly
+                mixed combination of flavors living our customers at wow. We
+                have about 7years in the mixing and creating signature flavours
+                which amounted to the best experience ever
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-none d-md-block">
+          <div class="d-flex justify-content-end align-items-end">
+            <img
+              src="assets/images/coming-soon/coming-soon-image.svg"
+              class="w-25"
+              alt="Image"
+            />
+          </div>
+        </div>
+      </div>
+      <div style="background-color: #ffbb45">
+        <div class="container py-3 px-4">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-3 d-none d-md-block">
+              <p class="fs-6 mb-0" style="color: #1a1a50">Follow us</p>
+            </div>
+            <div class="col-3 col-md-3">
+              <a
+                class="nav-link"
+                href="https://www.instagram.com/seven.hookah7/?igshid=YmMyMTA2M2Y%3D"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/icons/instagram-icon.svg"
+                  alt="social icon"
+                />
+              </a>
+            </div>
+            <div class="col-3 col-md-3">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com/search/top?q=7hookah%20dxb"
+                target="_blank"
+              >
+                <img src="assets/images/icons/facebook.svg" alt="social icon" />
+              </a>
+            </div>
+            <div class="col-4 col-md-3">
+              <a
+                class="nav-link text-decoration-none fs-6 text-center regular-p-font"
+                href="#"
+                target="_blank "
+                style="color: #1a1a50"
+                >www.7hookah.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
