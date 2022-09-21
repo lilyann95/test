@@ -31,7 +31,6 @@
   }
   .about {
     @media screen and (max-width: 360px) {
-      // visibility: hidden;
       display: none !important;
       margin-bottom: 2rem !important;
     }
